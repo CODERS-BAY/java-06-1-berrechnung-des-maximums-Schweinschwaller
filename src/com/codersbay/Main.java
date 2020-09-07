@@ -13,6 +13,18 @@ public class Main {
         String inputStr = "";
         int[] userInput = new int[1];
         boolean firsttime = true;
+
+        while (!s.hasNext("q")) {
+            int result = s.nextInt();
+            // the userInput Array has already one element so the first time i have to fill that.
+            if (firsttime) {
+                userInput[0] = result;
+                firsttime = false;
+            } else {
+                userInput = addElement(userInput, result);
+            }
+        }
+        /* old code
         while (true) {
             inputStr = s.nextLine();
             // abort of the input
@@ -47,7 +59,7 @@ public class Main {
             } else {
                 userInput = addElement(userInput, result);
             }
-        }
+        }*/
         System.out.println("Your list with " + userInput.length + " elements:");
         System.out.println(Arrays.toString(userInput));
 
@@ -68,6 +80,6 @@ public class Main {
         }
 
         help[help.length - 1] = inputElement;
-        return (help);
+        return help;
     }
 }
