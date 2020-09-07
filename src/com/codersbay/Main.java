@@ -20,7 +20,7 @@ public class Main {
                 break;
             }
             // to get a number out of the String
-            int result = 0;
+            int result = Integer.MIN_VALUE;
             boolean positivSign = true;
             String help = "";
             for (int j = 0; j < inputStr.length(); j++) {
