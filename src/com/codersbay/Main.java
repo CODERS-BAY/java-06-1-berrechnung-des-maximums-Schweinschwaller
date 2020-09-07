@@ -20,7 +20,7 @@ public class Main {
                 break;
             }
             // to get a number out of the String
-            int result = Integer.MIN_VALUE;
+            int result = 0;
             boolean positivSign = true;
             String help = "";
             for (int j = 0; j < inputStr.length(); j++) {
@@ -51,7 +51,7 @@ public class Main {
         System.out.println("Your list with " + userInput.length + " elements:");
         System.out.println(Arrays.toString(userInput));
 
-        int max = 0;
+        int max = Integer.MIN_VALUE;
         for (int i = 0; i < userInput.length; i++) {
             if (userInput[i] > max) {
                 max = userInput[i];
